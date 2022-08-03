@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sample.dao.InformationDao">
+    <insert id="addInfo">
+        insert into dic_information
+            (dic_name, dic_project, dic_alias, dic_describe, dic_type)
+        values (#{dicName}, #{dicProject}, #{dicAlias}, #{dicDescribe}, #{dicType})
+    </insert>
+
+    <insert id="addValue">
+        insert into dic_type_default (dic_key, dic_value)
+        values (#{dicKey}, #{dicValue})
+    </insert>
+
+    <insert id="addMirror">
+        insert into dic_type_mirror (url, `name`, email, password)
+        values (#{url}, #{name}, #{email}, #{password})
+    </insert>
+
+    <insert id="addTls">
+        insert into dic_type_tls (certificate, private_key)
+        values (#{certificate}, #{privateKey})
+    </insert>
+
+    <insert id="addUser">
+        insert into dic_type_user (user_name, user_password)
+        values (#{userName}, #{userPassword})
+    </insert>
+</mapper>
