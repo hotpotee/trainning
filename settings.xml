@@ -159,7 +159,7 @@ under the License.
 	<mirror>
         <id>myRepository</id>
         <name>myRepository</name>
-        <url>http://192.168.180.129:8081/repository/maven-public/</url>
+        <url>http://192.168.180.130:8081/repository/maven-my/</url>
         <mirrorOf>central</mirrorOf>
     </mirror>
     <!--
